@@ -54,3 +54,6 @@ h4{
 #table a:hover{
   text-decoration: underline;
 }
+@media screen and (min-width: 700px)  {
+  font-size: calc(1em + 1vw);
+}
