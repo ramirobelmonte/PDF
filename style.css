@@ -15,7 +15,7 @@ li{
 body{
   height: 100vh;
   font-family: sans-serif, arial;
-  font-size: calc(.5em + 1vw);
+  font-size: calc(.7em + 1vw);
   color: #fff;
 }
 
@@ -55,5 +55,7 @@ h4{
   text-decoration: underline;
 }
 @media screen and (min-width: 700px)  {
-  font-size: calc(.7em + 1vw);
+  body{
+    font-size: calc(.5em + 1vw);
+  }
 }
