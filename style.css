@@ -10,7 +10,7 @@
 }
 a{
   text-decoration: none;
-  color: #fff;
+  color: inherit;
 }
 a::before{
   content: "A";
@@ -22,17 +22,15 @@ li{
 }
 
 body{
+  color: #fff;
   height: 100vh;
   font-family: sans-serif, arial;
   font-size: calc(.7em + 1vw);
 }
-
 .content{
   width: 85vw;
   margin: 0 auto;
 }
-
-
 header{
   display: flex;
   flex-wrap: wrap;
@@ -48,7 +46,7 @@ section{
 }
 h4{
   border-radius: 1em 1em 0 0;
-  background: #388e3c;
+  background: #263238;
   padding: .5em 1em;
 }
 li{
@@ -62,8 +60,16 @@ li{
 li:last-child{
   border: none;
 }
+.import{
+  background: #FFEB3B;
+  color: #000;
+  border-bottom: 0.1em solid #fbc02d;
+}
+.import:hover{
+  background: #fbc02d;
+}
 li:hover{
-  background: #4caf50;
+  background: #81C784;
 }
 @media screen and (min-width: 700px)  {
   body{
