@@ -76,6 +76,12 @@ li:last-child{
 .pc:hover{
   background: #1e88e5;
 }
+.pdf{
+  background-color: #f44336;
+  padding: .2em .5em;
+  text-transform: uppercase;
+  float: right;
+}
 li:hover{
   background: #81C784;
 }
@@ -84,3 +90,4 @@ li:hover{
     font-size: calc(.5em + 1vw);
   }
 }
+/*actualizado
