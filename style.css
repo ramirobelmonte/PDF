@@ -60,13 +60,21 @@ li{
 li:last-child{
   border: none;
 }
-.import{
+.sd{
   background: #FFEB3B;
   color: #000;
   border-bottom: 0.1em solid #fbc02d;
 }
-.import:hover{
+.sd:hover{
   background: #fbc02d;
+}
+.pc{
+  background: #03A9F4;
+  color: #fff;
+  border-bottom: 0.1em solid #1e88e5;
+}
+.pc:hover{
+  background: #1e88e5;
 }
 li:hover{
   background: #81C784;
