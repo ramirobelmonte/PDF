@@ -2,6 +2,12 @@
   font-family: Icon;
   src: url("Icon.woff");
 }
+:root{
+  --color-negro: #1a1a1a;
+  --color-blanco: #F7F8F3;
+  --color-fd: #6CCA51;
+  --color-sd: #A3EB6A;
+}
 /*reset*/
 *{
   margin: 0;
@@ -13,23 +19,25 @@
   list-style: none;
 }
 body{
-  color: #fff;
+  color: var(--color-negro);
   font-family: sans-serif, arial;
   font-size: calc(.7em + 1vw);
 }
 header{
   font-family: gilroy, arial bold, Roboto;
   text-align: center;
-  color: #000;
   padding: 2em 0;
 }
+img{
+  height: 4em;
+}
 h4{
-  background: #263238;
+  background: var(--color-negro);
+  color: var(--color-blanco);
   padding: .5em 1em;
 }
 li{
-  background: #66BB6A;
-  border-bottom: 0.05em solid #263238;
+  border-bottom: 0.05em solid var(--color-negro);
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -48,20 +56,11 @@ a::before{
   margin-right: 0.5em;
 }
 /*Tipos*/
-.sd{
-  background: #FFEB3B;
-  color: #000;
+li:nth-child(even){
+  background: var(--color-fd);
 }
-.pc{
-  background: #03A9F4;
-}
-.pdf{
-  background-color: #f44336;
-  text-overflow: clip;
-  white-space: nowrap;
-  overflow: visible;
-  color: #fff;
-  text-transform: uppercase;
+li:nth-child(odd){
+  background: var(--color-sd);
 }
 li:hover{
   filter: brightness(90%);
