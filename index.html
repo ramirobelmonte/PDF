@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png" type="image/png">
+    <script type="text/javascript" src="./../jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>Archivos digitales</title>
   </head>
   <body>
@@ -12,44 +14,34 @@
       <img src="icon.png"><h1>Archivos digitales</h1>
     </header>
     <section>
+      <div class="row">
       <h4>Nombre del documento</h4>
-      <ul id="table">
-        <li>
-          <a target="_blank" href="Documentos/Aproximacion_al_concepto_de_curriculum.pdf">Aproximacion_al_concepto_de_curriculum.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/Practica.pdf">1_PRACTICO_DE_SEGUNDO_AÑO_2019.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/LineamientosPoliticosYEstrategicos-res84-09.pdf">LineamientosPoliticosYEstrategicos-res84-09.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/Resolucion_84-09_CFE.pdf">Resolucion_84-09_CFE.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/Ley_De_Educacion_Nacional.pdf">Ley_De_Educacion_Nacional.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/LasInstitucionesEducativas-CaraYCeca.pdf">LasInstitucionesEducativas-CaraYCeca.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/Programa_Biologia_General.pdf">Programa_Biologia_General.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/Programa_Didactica_General.pdf">Programa_Didactica_General.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/Programa_Pedagogia.pdf">Programa_Pedagogia.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/Programa_Psicologia_Educacional.pdf">Programa_Psicologia_Educacional.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/Programa_Quimica_General.pdf">Programa_Quimica_General.pdf</a>
-        </li>
-        <li>
-          <a target="_blank" href="Documentos/Regimen_de_Correlatividades.pdf">Regimen_de_Correlatividades.pdf</a>
-        </li>
+      <!-- <select class="filtro" name="filtro">
+        <option>Categorías</option>
+        <option value="pt">Práctica</option>
+        <option value="mf">Morfología y diversidad vegetal</option>
+        <option value="pg">Programas</option>
+      </select> -->
+    </div>
+      <ul>
+<!-- Morfologia -->
+        <li id="mf"><a target="_blank" href="Documentos/2019_Partes_de_la_celula_vegetal_y_sus_funciones.pdf">2019_Partes_de_la_célula_vegetal_y_sus_funciones.pdf</a></li>
+        <li id="mf"><a target="_blank" href="Documentos/2019_Tejidos_Meristematicos.pdf">2019_Tejidos_Meristemáticos.pdf</a></li>
+        <li id="mf"><a target="_blank" href="Documentos/2019_Plantas_Vasculares.pdf">2019_Plantas_Vasculares.pdf</a></li>
+<!-- Practica Docente -->
+        <li id="pt"><a target="_blank" href="Documentos/Aproximacion_al_concepto_de_curriculum.pdf">Aproximación_al_concepto_de_curriculum.pdf</a></li>
+        <li id="pt"><a target="_blank" href="Documentos/Practica.pdf">1_PRACTICO_DE_SEGUNDO_AÑO_2019.pdf</a></li>
+        <li id="pt"><a target="_blank" href="Documentos/LineamientosPoliticosYEstrategicos-res84-09.pdf">LineamientosPoliticosYEstrategicos-res84-09.pdf</a></li>
+        <li id="pt"><a target="_blank" href="Documentos/Resolucion_84-09_CFE.pdf">Resolución_84-09_CFE.pdf</a></li>
+        <li id="pt"><a target="_blank" href="Documentos/Ley_De_Educacion_Nacional.pdf">Ley_De_Educacion_Nacional.pdf</a></li>
+        <li id="pt"><a target="_blank" href="Documentos/LasInstitucionesEducativas-CaraYCeca.pdf">LasInstitucionesEducativas-CaraYCeca.pdf</a></li>
+<!-- Programas -->
+        <li id="pg"><a target="_blank" href="Documentos/Programa_Biologia_General.pdf">Programa_Biologia_General.pdf</a></li>
+        <li id="pg"><a target="_blank" href="Documentos/Programa_Didactica_General.pdf">Programa_Didactica_General.pdf</a></li>
+        <li id="pg"><a target="_blank" href="Documentos/Programa_Pedagogia.pdf">Programa_Pedagogia.pdf</a></li>
+        <li id="pg"><a target="_blank" href="Documentos/Programa_Psicologia_Educacional.pdf">Programa_Psicologia_Educacional.pdf</a></li>
+        <li id="pg"><a target="_blank" href="Documentos/Programa_Quimica_General.pdf">Programa_Quimica_General.pdf</a></li>
+        <li><a target="_blank" href="Documentos/Regimen_de_Correlatividades.pdf">Regimen_de_Correlatividades.pdf</a></li>
       </ul>
     </section>
   </body>

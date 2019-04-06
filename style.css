@@ -32,23 +32,31 @@ img{
   height: 4em;
 }
 h4{
-  background: var(--color-negro);
   color: var(--color-blanco);
   padding: .5em 1em;
 }
-li{
-  border-bottom: 0.05em solid var(--color-negro);
+.row{
+  background: var(--color-negro);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+select{
+  background: var(--color-negro);
+  width: 30%;
+  color: var(--color-blanco);
+  border: none;
+}
+a{
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-}
-a{
   white-space: nowrap;
   padding: .5em 1em;
   overflow: hidden;
   text-overflow: ellipsis;
+  border-bottom: 0.05em solid var(--color-negro);
 }
 a::before{
   content: "A";
