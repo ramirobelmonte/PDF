@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  box-sizing: border-box;
+  box-sizing: content-box;
   text-decoration: none;
   color: inherit;
   list-style: none;
@@ -22,7 +22,7 @@
 body{
   color: var(--color-negro);
   font-family: sans-serif, arial;
-  font-size: calc(.7em + 1vw);
+  font-size: calc(.8em + 1vw);
 }
 header{
   font-family: gilroy, arial bold, Roboto;
@@ -41,10 +41,12 @@ h4{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 select{
   background: var(--color-negro);
   width: 30%;
+  padding-left: .5em;
   color: var(--color-blanco);
   border-left: 1px solid var(--color-blanco);
 }
