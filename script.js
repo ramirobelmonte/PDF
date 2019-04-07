@@ -1,12 +1,17 @@
 $(document).ready(function(){
+
   $('.filtro').on('change', function(){
     if (this.value == "pt") {
       $('li').hide(),
-      $('#pt').show();
+      $('.pt').show();
     }
-    if (this.value == "pg") {
+    else if (this.value == "mf") {
       $('li').hide(),
-      $('#pg').show();
+      $('.mf').show();
+    }
+    else if (this.value == "pg") {
+      $('li').hide(),
+      $('.pg').show();
     }
     else {
       $('li').show();

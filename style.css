@@ -17,6 +17,7 @@
   text-decoration: none;
   color: inherit;
   list-style: none;
+  border: none;
 }
 body{
   color: var(--color-negro);
@@ -45,17 +46,19 @@ select{
   background: var(--color-negro);
   width: 30%;
   color: var(--color-blanco);
-  border: none;
+  border-left: 1px solid var(--color-blanco);
 }
 a{
+  padding: .5em 1em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+li{
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
-  white-space: nowrap;
-  padding: .5em 1em;
-  overflow: hidden;
-  text-overflow: ellipsis;
   border-bottom: 0.05em solid var(--color-negro);
 }
 a::before{
