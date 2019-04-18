@@ -1,20 +1,32 @@
-$(document).ready(function(){
+function puto(){
+  var x = document.querySelector('#filtro').value,
+      li = document.getElementsByTagName('li'),
+      pt = document.getElementsByClassName('pt'),
+      mf = document.getElementsByClassName('mf'),
+      pg = document.getElementsByClassName('pg');
 
-  $('.filtro').on('change', function(){
-    if (this.value == "pt") {
-      $('li').hide(),
-      $('.pt').show();
+  function ocultar(elemento) {
+    for (var i = 0; i < elemento.length; i++) {
+      elemento[i].classList.add("hide");
     }
-    else if (this.value == "mf") {
-      $('li').hide(),
-      $('.mf').show();
+  }
+  function mostrar(elemento) {
+    for (var i = 0; i < elemento.length; i++) {
+      elemento[i].classList.remove("hide");
     }
-    else if (this.value == "pg") {
-      $('li').hide(),
-      $('.pg').show();
-    }
-    else {
-      $('li').show();
-    }
-  })
-});
+  }
+
+  if (x == 'pt') {
+    ocultar(li),mostrar(pt);
+  }
+  else if (x == 'mf') {
+    ocultar(li), mostrar(mf);
+  }
+  else if (x == 'pg') {
+    ocultar(li), mostrar(pg);
+  }
+  else {
+    mostrar(li);
+  }
+};
+// https://jsfiddle.net/v2ewfg9u/ !! filtrar tabla sasas
