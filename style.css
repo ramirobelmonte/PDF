@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  box-sizing: content-box;
+  box-sizing: border-box;
   text-decoration: none;
   color: inherit;
   list-style: none;
@@ -53,7 +53,7 @@ select{
   color: var(--color-negro);
   padding: .5em;
   border-radius: .5em;
-  max-width: 50%;
+  max-width: 40%;
 }
 a{
   padding: .5em 1em;
@@ -66,14 +66,20 @@ li{
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
-  border-bottom: 0.05em solid var(--color-negro);
+  border-bottom: 0.05em solid #90a4ae;
   animation-name: carga;
   animation-duration: 1s;
 }
 a::before{
-  content: "A";
-  font-family: Icon;
-  margin-right: 0.5em;
+  content: "PDF";
+  margin-right: 1em;
+  font-size: .6em;
+  vertical-align: middle;
+  background: #f44336;
+  color: var(--color-blanco);
+  padding: .2em .5em;
+  font-weight: bold;
+  border-radius: .5em;
 }
 /*Tipos*/
 li:nth-child(even){
@@ -86,6 +92,12 @@ li:hover{
   filter: brightness(90%);
 }
 .hide{ display: none }
+.fixed{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
 
 @keyframes carga {
   from{

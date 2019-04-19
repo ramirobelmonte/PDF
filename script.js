@@ -1,32 +1,24 @@
-function puto(){
-  var x = document.querySelector('#filtro').value,
-      li = document.getElementsByTagName('li'),
-      pt = document.getElementsByClassName('pt'),
-      mf = document.getElementsByClassName('mf'),
-      pg = document.getElementsByClassName('pg');
-
-  function ocultar(elemento) {
-    for (var i = 0; i < elemento.length; i++) {
-      elemento[i].classList.add("hide");
-    }
+// esto es la tabla de archivos que no es tan tabla
+let li = document.getElementsByTagName('li');
+// esta es una funcion que oculta el primero y muestra el segundo
+function toggle(elemento, elemento2) {
+  for (var i = 0; i < elemento.length; i++) {
+    elemento[i].classList.add('hide')
   }
-  function mostrar(elemento) {
-    for (var i = 0; i < elemento.length; i++) {
-      elemento[i].classList.remove("hide");
-    }
-  }
-
-  if (x == 'pt') {
-    ocultar(li),mostrar(pt);
-  }
-  else if (x == 'mf') {
-    ocultar(li), mostrar(mf);
-  }
-  else if (x == 'pg') {
-    ocultar(li), mostrar(pg);
-  }
-  else {
-    mostrar(li);
+  for (var i = 0; i < elemento2.length; i++) {
+    elemento2[i].classList.remove('hide')
   }
 };
+// la funcion gato
+function cat(){
+  x = document.querySelector('#filtro').value;
+  y = document.getElementsByClassName(x);
+
+  if (x == 'all') {
+    toggle(y, li);
+  }else {
+    toggle(li, y);
+  }
+};
+
 // https://jsfiddle.net/v2ewfg9u/ !! filtrar tabla sasas
