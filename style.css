@@ -24,7 +24,7 @@ body{
   background: var(--fondo);
   color: var(--color-negro);
   font-family: sans-serif, arial;
-  font-size: calc(.7em + 1vw);
+  font-size: calc(.8em + 1vw);
   animation-name: carga;
   animation-duration: 2s;
 }
