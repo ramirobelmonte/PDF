@@ -15,7 +15,7 @@ function cat(){
   y = document.getElementsByClassName(x);
 
   if (x == 'all') {
-    toggle(y, li);
+    toggle(li, li);
   }else {
     toggle(li, y);
   }

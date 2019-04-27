@@ -1,12 +1,10 @@
-@font-face {
-  font-family: Icon;
-  src: url("Icon.woff");
-}
 :root{
+  --fondo: #fafbfd;
   --color-negro: #1a1a1a;
   --color-blanco: #F7F8F3;
   --color-fd: #c9d6df;
   --color-sd: #f0f5f9;
+  --parrafo: #9B9B9B;
 }
 /*reset*/
 *{
@@ -23,23 +21,33 @@
   outline: none;
 }
 body{
+  background: var(--fondo);
   color: var(--color-negro);
   font-family: sans-serif, arial;
-  font-size: calc(.8em + 1vw);
+  font-size: calc(.7em + 1vw);
+  animation-name: carga;
+  animation-duration: 2s;
 }
 header{
   font-family: gilroy, arial bold, Roboto;
   text-align: center;
-  padding: 2em 0;
+  padding: 3em 1em;
+}
+p{
+  color: var(--parrafo);
+  letter-spacing: .01em;
+  margin-top: .5em;
+  font-weight: lighter;
 }
 img{
   height: 4em;
+  margin-bottom: .5em;
 }
 h4{
   color: var(--color-blanco);
   padding-right: .2em;
 }
-form{
+nav{
   background: var(--color-negro);
   display: flex;
   flex-direction: row;
@@ -92,19 +100,12 @@ li:hover{
   filter: brightness(90%);
 }
 .hide{ display: none }
-.fixed{
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  width: 100%;
+@keyframes carga {
+  from{opacity: 0;}
+  to{opacity: 100;}
 }
 
-@keyframes carga {
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 100;
-  }
+@media screen and (max-width:400px) {
+  br{display: none;}
 }
-/*actualizaaaaaaaaaaaaaaaaaaa*/
+/* actualizacion */
