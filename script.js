@@ -1,6 +1,5 @@
-// esto es la tabla de archivos que no es tan tabla
 let li = document.getElementsByTagName('li');
-// esta es una funcion que oculta el primero y muestra el segundo
+
 function toggle(elemento, elemento2) {
   for (var i = 0; i < elemento.length; i++) {
     elemento[i].classList.add('hide')
@@ -8,8 +7,13 @@ function toggle(elemento, elemento2) {
   for (var i = 0; i < elemento2.length; i++) {
     elemento2[i].classList.remove('hide')
   }
+  if (i == 0) {
+    document.getElementById('nada').classList.remove('hide')
+  }else {
+    document.getElementById('nada').classList.add('hide')
+  }
 };
-// la funcion gato
+
 function cat(){
   x = document.querySelector('#filtro').value;
   y = document.getElementsByClassName(x);
@@ -21,4 +25,5 @@ function cat(){
   }
 };
 
-// https://jsfiddle.net/v2ewfg9u/ !! filtrar tabla sasas
+// *https://jsfiddle.net/v2ewfg9u/ como filtrar la lista
+// *futura actualizacion: usar la api de drive

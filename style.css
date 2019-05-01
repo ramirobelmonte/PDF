@@ -89,7 +89,14 @@ a::before{
   font-weight: bold;
   border-radius: .5em;
 }
-/*Tipos*/
+#nada{
+  text-align: center;
+  background-color: #f44336;
+  color: var(--color-blanco);
+  padding: 1em 0;
+  animation-name: carga;
+  animation-duration: 1s;
+}
 li:nth-child(even){
   background: var(--color-fd);
 }
@@ -99,7 +106,7 @@ li:nth-child(odd){
 li:hover{
   filter: brightness(90%);
 }
-.hide{ display: none }
+.hide{ display: none; }
 @keyframes carga {
   from{opacity: 0;}
   to{opacity: 100;}
