@@ -1,29 +1,25 @@
-let li = document.getElementsByTagName('li');
+console.log("tamo activo")
 
-function toggle(elemento, elemento2) {
-  for (var i = 0; i < elemento.length; i++) {
-    elemento[i].classList.add('hide')
-  }
-  for (var i = 0; i < elemento2.length; i++) {
-    elemento2[i].classList.remove('hide')
-  }
-  if (i == 0) {
-    document.getElementById('nada').classList.remove('hide')
-  }else {
-    document.getElementById('nada').classList.add('hide')
-  }
-};
+document.querySelector('html').addEventListener('load', traerDatos());
 
-function cat(){
-  x = document.querySelector('#filtro').value;
-  y = document.getElementsByClassName(x);
+function traerDatos() {
+  const xhttp = new XMLHttpRequest();
 
-  if (x == 'all') {
-    toggle(li, li);
-  }else {
-    toggle(li, y);
+  xhttp.open('GET', 'https://script.google.com/macros/s/AKfycbxgSvcs5gANRET0tFDdBl1Hh5dlekwkXMnamwIYAPjr3yEXRj8/exec', true);
+  xhttp.send();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let datos = JSON.parse(this.responseText);
+      item = datos.data;
+      console.log(item.length);
+
+      let tabla = document.querySelector('#tabla');
+      tabla.innerHTML = '';
+
+      for (var i = 1; i < item.length; i++) {
+        let items = item[i];
+        tabla.innerHTML += "<li><a href='" + items.Id + "'>" + items.Nombre + "</a></li>"
+      }
+    }
   }
-};
-
-// *https://jsfiddle.net/v2ewfg9u/ como filtrar la lista
-// *futura actualizacion: usar la api de drive
+}
