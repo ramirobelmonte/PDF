@@ -16,8 +16,9 @@ function traerDatos() {
       let tabla = document.querySelector('#tabla');
       tabla.innerHTML = '';
 
-      for (var i = 1; i < item.length; i++) {
+      for (var i = 0; i < item.length; i++) {
         let items = item[i];
+        console.log(items);
         tabla.innerHTML += "<li><a href='" + items.Id + "'>" + items.Nombre + "</a></li>"
       }
     }
