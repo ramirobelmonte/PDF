@@ -11,7 +11,7 @@ function traerDatos() {
 
       let datos = JSON.parse(this.responseText);
       item = datos;
-
+      console.log(datos);
       let filtro = item.filter(function (el) {
         return (el.tipo != 'application/vnd.google-apps.spreadsheet')
       })
@@ -21,7 +21,7 @@ function traerDatos() {
 
       for (var i = 0; i < filtro.length; i++) {
         let items = filtro[i];
-        tabla.innerHTML += "<li><i>" + items.tipo.split('/')[1] + "</i><a href='" + items.Id + "'>" + items.Nombre + "</a></li>"
+        tabla.innerHTML += "<li><i>" + items.tipo.split('/')[1] + "</i><a href='" + items.Link + "'>" + items.Nombre + "</a></li>"
       }
     }
   }
