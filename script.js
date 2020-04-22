@@ -11,15 +11,18 @@ function traerDatos() {
     if (this.readyState == 4 && this.status == 200) {
       let datos = JSON.parse(this.responseText);
       item = datos.data;
-      console.log(item.length);
+
+      let filtro = item.filter(function (el) {
+        return (el.tipo != 'application/vnd.google-apps.spreadsheet')
+      })
 
       let tabla = document.querySelector('#tabla');
       tabla.innerHTML = '';
 
-      for (var i = 0; i < item.length; i++) {
-        let items = item[i];
+      for (var i = 0; i < filtro.length; i++) {
+        let items = filtro[i];
         console.log(items);
-        tabla.innerHTML += "<li><a href='" + items.Id + "'>" + items.Nombre + "</a></li>"
+        tabla.innerHTML += "<li><i>" + items.tipo.split('/')[1] + "</i><a href='" + items.Id + "'>" + items.Nombre + "</a></li>"
       }
     }
   }

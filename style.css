@@ -78,12 +78,11 @@ li{
   animation-name: carga;
   animation-duration: 1s;
 }
-a::before{
-  content: "PDF";
-  margin-right: 1em;
+i{
+  margin-left: 1.5em;
   font-size: .6em;
   vertical-align: middle;
-  background: #f44336;
+  background: #006394;
   color: var(--color-blanco);
   padding: .2em .5em;
   font-weight: bold;
