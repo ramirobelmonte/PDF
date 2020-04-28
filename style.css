@@ -52,7 +52,7 @@ nav{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
   padding: .5em 1em;
 }
@@ -87,6 +87,11 @@ i{
   padding: .2em .5em;
   font-weight: bold;
   border-radius: .5em;
+}
+#formulario{
+  padding: .5em;
+  border-radius: 1em;
+  margin-left: .5em; 
 }
 #nada{
   text-align: center;

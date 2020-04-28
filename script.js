@@ -1,28 +1,38 @@
-document.querySelector('html').addEventListener('load', traerDatos());
-
-function traerDatos() {
+window.onload = function() {
   const xhttp = new XMLHttpRequest();
-
   xhttp.open('GET', 'https://script.google.com/macros/s/AKfycbxgSvcs5gANRET0tFDdBl1Hh5dlekwkXMnamwIYAPjr3yEXRj8/exec', true);
   xhttp.send();
+
   xhttp.onreadystatechange = function() {
 
     if (this.readyState == 4 && this.status == 200) {
 
       let datos = JSON.parse(this.responseText);
-      item = datos;
-      console.log(datos);
-      let filtro = item.filter(function (el) {
-        return (el.tipo != 'application/vnd.google-apps.spreadsheet')
-      })
+      const formulario = document.querySelector('#formulario');
+      const tabla = document.querySelector('#tabla');
 
-      let tabla = document.querySelector('#tabla');
-      tabla.innerHTML = '';
+      const filtrar = ()=> {
+        const texto = formulario.value.toLowerCase().replace(" ","");
+        tabla.innerHTML = '';
 
-      for (var i = 0; i < filtro.length; i++) {
-        let items = filtro[i];
-        tabla.innerHTML += "<li><i>" + items.tipo.split('/')[1] + "</i><a href='" + items.Link + "'>" + items.Nombre + "</a></li>"
+        for (var i = 0; i < datos.length; i++){
+            let item = datos[i];
+            let dato = datos[i].Nombre.toLowerCase();
+            console.log(texto);
+            if (dato.indexOf(texto) !== -1) {
+
+              tabla.innerHTML += `
+              <li>
+              <i>${item.tipo.split('/')[1]}</i>
+              <a href='${item.Link}'>${item.Nombre}</a>
+              </li>`
+            }
+        }
       }
+
+      formulario.addEventListener('keyup', filtrar)
+      filtrar()
+
     }
   }
-}
+};
