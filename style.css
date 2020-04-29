@@ -1,3 +1,4 @@
+
 :root{
   --fondo: #fafbfd;
   --color-negro: #1a1a1a;
@@ -23,13 +24,12 @@
 body{
   background: var(--fondo);
   color: var(--color-negro);
-  font-family: sans-serif, arial;
+  font-family: 'Roboto';
   font-size: calc(.8em + 1vw);
   animation-name: carga;
   animation-duration: 2s;
 }
 header{
-  font-family: gilroy, arial bold, Roboto;
   text-align: center;
   padding: 3em 1em;
 }
@@ -37,78 +37,73 @@ p{
   color: var(--parrafo);
   letter-spacing: .01em;
   margin-top: .5em;
-  font-weight: lighter;
+  font-style: italic;
 }
 img{
   height: 4em;
   margin-bottom: .5em;
 }
-h4{
-  color: var(--color-blanco);
-  padding-right: .2em;
-}
-nav{
-  background: var(--color-negro);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: .5em 1em;
-}
-select{
-  background: var(--color-blanco);
-  color: var(--color-negro);
-  padding: .5em;
-  border-radius: .5em;
-  max-width: 40%;
-}
-a{
-  padding: .5em 1em;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-li{
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: center;
-  border-bottom: 0.05em solid #90a4ae;
+table{
+  border-collapse: collapse;
+  /* table-layout: fixed; */
+  width: 100%;
+  border: 0.05em solid #90a4ae;
   animation-name: carga;
   animation-duration: 1s;
 }
-i{
-  margin-left: 1.5em;
-  font-size: .6em;
-  vertical-align: middle;
-  background: #006394;
-  color: var(--color-blanco);
-  padding: .2em .5em;
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+table td, th {
+  padding: .625em;
+  text-align: left;
+}
+tbody td{
+  word-break: break-word;
+}
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.icono{
+  font-size: .8em;
+  text-align: center;
+  color: var(--color-negro);
   font-weight: bold;
-  border-radius: .5em;
+  padding: 0 1em;
+  word-break: keep-all;
+}
+.etiqueta{
+  text-align: center;
+  font-style: italic;
+}
+.buscar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border-bottom: .2em solid var(--color-negro);
+  background: #d6d6d6;
+  font-size: .85em;
+  color: gray;
+}
+.material-icons{
+  margin: 0 .5em;
 }
 #formulario{
-  padding: .5em;
-  border-radius: 1em;
-  margin-left: .5em; 
-}
-#nada{
-  text-align: center;
-  background-color: #f44336;
-  color: var(--color-blanco);
-  padding: 1em 0;
-  animation-name: carga;
-  animation-duration: 1s;
-}
-li:nth-child(even){
-  background: var(--color-fd);
-}
-li:nth-child(odd){
-  background: var(--color-sd);
-}
-li:hover{
-  filter: brightness(90%);
+  font-size: inherit;
+  padding: .625em 0;
+  background: none;
+  width: 100%;
 }
 .hide{ display: none; }
 @keyframes carga {

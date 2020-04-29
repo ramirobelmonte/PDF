@@ -18,14 +18,19 @@ window.onload = function() {
         for (var i = 0; i < datos.length; i++){
             let item = datos[i];
             let dato = datos[i].Nombre.toLowerCase();
-            console.log(texto);
+
             if (dato.indexOf(texto) !== -1) {
 
               tabla.innerHTML += `
-              <li>
-              <i>${item.tipo.split('/')[1]}</i>
-              <a href='${item.Link}'>${item.Nombre}</a>
-              </li>`
+              <tr>
+                <td class="icono">${item.tipo.split('/')[1]}</td>
+                <td class="nombre">
+                  <a class="tarjeta" href='${item.Link}'>
+                    ${item.Nombre.replace(/\w[^_]+$/g,"")}
+                  </a>
+                </td>
+                <td class="etiqueta">${item.Nombre.match(/[^\_]+(?=\.)/g)}</td>
+              </tr>`
             }
         }
       }
