@@ -17,7 +17,7 @@ window.onload = function() {
 
         for (var i = 0; i < datos.length; i++){
             let item = datos[i];
-            let dato = datos[i].Nombre.toLowerCase();
+            let dato = datos[i].Nombre.toLowerCase().replace(" ","");
 
             if (dato.indexOf(texto) !== -1) {
 
