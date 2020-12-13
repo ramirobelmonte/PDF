@@ -23,7 +23,7 @@ window.onload = function() {
 
               tabla.innerHTML += `
               <tr>
-                <td class="icono">${item.tipo.split('/')[1]}</td>
+                <!--<td class="icono">${item.tipo.split('/')[1]}</td>-->
                 <td class="nombre">
                   <a class="tarjeta" href='${item.Link}'>
                     ${item.Nombre.replace(/\w[^_]+$/g,"")}
