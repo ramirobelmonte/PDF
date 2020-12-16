@@ -74,7 +74,7 @@ table th {
   text-transform: uppercase;
   text-align: center;
 }
-.icono{
+.tipo{
   font-size: .8em;
   text-align: center;
   color: var(--color-negro);
@@ -82,11 +82,11 @@ table th {
   padding: 0 1em;
   word-break: keep-all;
 }
-.etiqueta{
+.asignatura{
   text-align: center;
   font-style: italic;
 }
-.buscar{
+.searchInput{
   display: flex;
   flex-direction: row;
   align-items: center;
