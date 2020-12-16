@@ -30,8 +30,14 @@ body{
   animation-duration: 2s;
 }
 header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   padding: 3em 1em;
+}
+.loader{
+  height: 100vh;
 }
 p{
   color: var(--parrafo);

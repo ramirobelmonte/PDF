@@ -3,7 +3,9 @@ window.onload = () => {
   xhttp.open('GET', 'https://script.google.com/macros/s/AKfycbxgSvcs5gANRET0tFDdBl1Hh5dlekwkXMnamwIYAPjr3yEXRj8/exec', true);
   xhttp.send();
   xhttp.onload = function(){
+      document.querySelector('header').classList.remove('loader');
       let objetosJson = JSON.parse(this.responseText);
+      console.log(this);
       const searchInput = document.querySelector('#searchInput');
       const tabla = document.querySelector('#tabla');
       let fragment = document.createDocumentFragment();
@@ -20,3 +22,4 @@ window.onload = () => {
         tabla.appendChild(fragment);
   };
 };
+// Para el buscador => .normalize('NFD').replace(/[\u0300-\u036f]/g,"");
