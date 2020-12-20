@@ -10,7 +10,7 @@
     <title>Archivos Digitales</title>
   </head>
   <body>
-    <header class="loader">
+    <header>
       <img src="icon.svg"><h1>Archivos Digitales</h1>
       <p>
         Encontrá todos los documentos que necesites
@@ -18,10 +18,10 @@
         de la manera más fácil y accesible.
       </p>
     </header>
-    <div class="contenedor">
-      <form class="buscar">
+    <div class="contenedor-busqueda">
+      <form class="formulario-busqueda">
         <span class="material-icons"> search </span>
-        <input type="text" id="searchInput" placeholder="Buscar">
+        <input type="text" id="input-busqueda" placeholder="Buscar">
       </form>
       <section>
         <table>
@@ -32,20 +32,19 @@
               <th>Categoría</th>
             </tr>
           </thead>
-          <tbody id="tabla">
+          <tbody id="tabla-contenedora">
             <template id="template-tr">
               <tr>
-                <td class="tipo">${objetoJson.Tipo}</td>
-                <td class="nombre">
+                <td class="tipo-archivo">${objetoJson.Tipo}</td>
+                <td class="nombre-archivo">
                   <a href="${link}">${objetoJson.Nombre}</a>
                 </td>
-                <td class="asignatura">${objetoJson.Asignatura}</td>
+                <td class="asignatura-archivo">${objetoJson.Asignatura}</td>
               </tr>
             </template>
           </tbody>
         </table>
       </section>
-    </div class="contenedor">
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

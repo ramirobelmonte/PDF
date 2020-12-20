@@ -17,6 +17,7 @@
   color: inherit;
   list-style: none;
   border: none;
+  transition: height 2s ease 5s;
 }
 *:focus{
   outline: none;
@@ -36,8 +37,16 @@ header{
   text-align: center;
   padding: 3em 1em;
 }
-.loader{
+.fadeable{
   height: 100vh;
+}
+.fade-in{
+  height: auto;
+  transition: height 2s ease 5s;
+  -moz-transition: height 2s ease 5s;
+  -ms-transition: height 2s ease 5s;
+  -o-transition: height 2s ease 5s;
+  -webkit-transition: height 2s ease 5s;
 }
 p{
   color: var(--parrafo);
