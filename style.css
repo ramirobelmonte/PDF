@@ -17,7 +17,6 @@
   color: inherit;
   list-style: none;
   border: none;
-  transition: all 1s ease;
 }
 *:focus{
   outline: none;
@@ -36,6 +35,7 @@ header{
   justify-content: center;
   text-align: center;
   padding: 3em 1em;
+  transition: all 1s ease;
 }
 .show{
   height: 100vh;
