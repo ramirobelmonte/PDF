@@ -17,7 +17,6 @@
   color: inherit;
   list-style: none;
   border: none;
-  transition: height 2s ease 5s;
 }
 *:focus{
   outline: none;
@@ -25,7 +24,7 @@
 body{
   background: var(--fondo);
   color: var(--color-negro);
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial;
   font-size: calc(.8em + 1vw);
   animation-name: carga;
   animation-duration: 2s;
@@ -37,22 +36,51 @@ header{
   text-align: center;
   padding: 3em 1em;
 }
-.fadeable{
-  height: 100vh;
+
+.masonry{
+  margin: auto;
+  padding: 0 1em;
+  columns: 3;
+  column-gap: 1em;
 }
-.fade-in{
-  height: auto;
-  transition: height 2s ease 5s;
-  -moz-transition: height 2s ease 5s;
-  -ms-transition: height 2s ease 5s;
-  -o-transition: height 2s ease 5s;
-  -webkit-transition: height 2s ease 5s;
+.file-card{
+  display: inline-block;
+  margin-bottom: 1em;
+  position: relative;
+  width: 100%;
+  border-radius: 1em;
+  padding: 1.5em;
+  background: #673ab7;
 }
+.file-card h1,.file-card p{
+  color: #FFF;
+  margin-top: .2em;
+}
+.file-card span{font-weight: bolder; color: rgba(0 0 0 / .5);}
+.file-card p{font-size: .7em; text-transform: lowercase;color: rgba(255, 255, 255, 0.8);}
+.file-card h1::first-letter,.file-card p::first-letter{text-transform: uppercase;}
+/* Etiquetas de archivos */
+.PDF{
+  background-color: #d32f2f;
+}
+.DOCUMENTO{
+  background-color: #0288d1;
+}
+.IMAGEN{
+  background-color: #009688;
+}
+.VIDEO{
+  background-color: #607d8b;
+}
+.PRESENTACION{
+  background-color: #f4511e;
+}
+
 p{
   color: var(--parrafo);
   letter-spacing: .01em;
   margin-top: .5em;
-  font-style: italic;
+  /* font-style: italic; */
 }
 img{
   height: 4em;
@@ -126,7 +154,10 @@ table th {
   to{opacity: 100;}
 }
 
-@media screen and (max-width:400px) {
-  br{display: none;}
+@media screen and (max-width:800px) {
+  .masonry{columns: 2;}
 }
-/* actualizacion */
+@media screen and (max-width:600px) {
+  br{display: none;}
+  .masonry{columns: 1;}
+}

@@ -18,33 +18,20 @@
         de la manera más fácil y accesible.
       </p>
     </header>
-    <div class="contenedor-busqueda">
-      <form class="formulario-busqueda">
-        <span class="material-icons"> search </span>
-        <input type="text" id="input-busqueda" placeholder="Buscar">
-      </form>
-      <section>
-        <table>
-          <thead>
-            <tr>
-              <th>Tipo</th>
-              <th>Nombre</th>
-              <th>Categoría</th>
-            </tr>
-          </thead>
-          <tbody id="tabla-contenedora">
-            <template id="template-tr">
-              <tr>
-                <td class="tipo-archivo">${objetoJson.Tipo}</td>
-                <td class="nombre-archivo">
-                  <a href="${link}">${objetoJson.Nombre}</a>
-                </td>
-                <td class="asignatura-archivo">${objetoJson.Asignatura}</td>
-              </tr>
-            </template>
-          </tbody>
-        </table>
-      </section>
+    <!-- <select id="select-input" name="select-input">
+      <option disabled selected>Elige una asignatura</option>
+    </select> -->
+    <section class="masonry" id="masonry-section">
+      <template id="file-card-template">
+        <article class="file-card">
+          <a href="#">
+            <span id="file-tipo">PDF</span>
+            <h1 id="file-title">Barreras para el aprendizaje y la participacion</h1>
+            <p id="file-category">Inclusion educativa en el nivel secundario</p>
+          </a>
+        </article>
+      </template>
+    </section>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
