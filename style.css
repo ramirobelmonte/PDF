@@ -17,6 +17,7 @@
   color: inherit;
   list-style: none;
   border: none;
+  transition: all 3s ease;
 }
 *:focus{
   outline: none;
@@ -35,6 +36,9 @@ header{
   justify-content: center;
   text-align: center;
   padding: 3em 1em;
+}
+.show{
+  height: 100vh;
 }
 
 .masonry{

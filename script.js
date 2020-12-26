@@ -17,9 +17,6 @@ let extensiones = {
                   }
 let category = [];
 
-// se carga la ventana
-window.onload = () => {addApi()};
-
 
 // las funciones
 async function addApi() {
@@ -37,9 +34,11 @@ async function addApi() {
     // aqui armá algun div de error
     console.log('Error boludo');
   }
+  hideloading();
 }
 
-function optionAdd(lista) {
+// funciones varias
+function optionAdd(lista){
   let listaR = new Set(lista)
 
   listaR.forEach((options) => {
@@ -50,7 +49,7 @@ function optionAdd(lista) {
   });
 
 }
-function showTemplate(file) {
+function showTemplate(file){
   let clone = file_card_template.cloneNode(true)
 
   clone.querySelector('.file-card').classList.add(file.type);
@@ -62,3 +61,16 @@ function showTemplate(file) {
   fragment.appendChild(clone);
   section.appendChild(fragment);
 }
+function showloading() {
+  header.classList.add("show")
+  setTimeout(()=>{header.classList.remove("show")}, 5000)
+}
+function hideloading() {
+  header.classList.remove("show")
+}
+
+// se carga la ventana
+window.onload = () => {
+  showloading();
+  addApi();
+};
