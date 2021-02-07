@@ -35,12 +35,9 @@ header{
   justify-content: center;
   text-align: center;
   padding: 3em 1em;
-  transition: all 1s ease;
-}
-.show{
   height: 100vh;
 }
-
+.show{height: auto;}
 .masonry{
   margin: auto;
   padding: 0 1em;
@@ -89,37 +86,6 @@ p{
 img{
   height: 4em;
   margin-bottom: .5em;
-}
-table{
-  border-collapse: collapse;
-  /* table-layout: fixed; */
-  width: 100%;
-  border: 0.05em solid #90a4ae;
-  animation-name: carga;
-  animation-duration: 1s;
-}
-table caption {
-  font-size: 1.5em;
-  margin: .5em 0 .75em;
-}
-
-table tr {
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  padding: .35em;
-}
-table td, th {
-  padding: .625em;
-  text-align: left;
-}
-tbody td{
-  word-break: break-word;
-}
-table th {
-  font-size: .85em;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  text-align: center;
 }
 .tipo{
   font-size: .8em;
