@@ -37,21 +37,31 @@ header{
   padding: 3em 1em;
   height: 100vh;
 }
+form{
+  margin: 1em;
+  padding: .2em;
+  border-radius: 1em;
+  background: #c8c8c8;
+}
+input{
+  padding: 1em;
+  width: 100%;
+  background: transparent;
+}
+.filter{order:1; visibility: hidden; opacity: 0;}
 .show{height: auto;}
 .masonry{
-  margin: auto;
-  padding: 0 1em;
-  columns: 3;
-  column-gap: 1em;
+  margin: 0 1em;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  grid-gap: 1em;
 }
 .file-card{
-  display: inline-block;
-  margin-bottom: 1em;
-  position: relative;
   width: 100%;
   border-radius: 1em;
   padding: 1.5em;
   background: #673ab7;
+  height: min-content;
 }
 .file-card h1,.file-card p{
   color: #FFF;
@@ -123,11 +133,6 @@ img{
   from{opacity: 0;}
   to{opacity: 100;}
 }
-
-@media screen and (max-width:800px) {
-  .masonry{columns: 2;}
-}
-@media screen and (max-width:600px) {
-  br{display: none;}
-  .masonry{columns: 1;}
+@media (min-width: 500px) {
+  .masonry{grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );}
 }

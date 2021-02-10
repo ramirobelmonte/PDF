@@ -3,6 +3,7 @@ const url_api = 'https://script.google.com/macros/s/AKfycbx2ozkGTwFrDK0wTWP6eJw3
 // variables del DOM
 let header = document.querySelector('header'),
     section = document.getElementById('masonry-section'),
+    filterInput = document.getElementById('filterInput'),
     fragment = document.createDocumentFragment(),
     file_card_template = document.getElementById('file-card-template').content,
     select = document.getElementById('select-input')
@@ -16,6 +17,7 @@ let extensiones = {
                     "image/jpeg" : "IMAGEN"
                   }
 let category = []
+let lista = []
 
 
 // las funciones
@@ -28,8 +30,9 @@ async function addApi() {
       archivo.type = extensiones[archivo.type]
       archivo.name = archivo.name.toLowerCase()
       category.push(archivo.category)
+      lista.push(archivo.name)
       showTemplate(archivo)
-    })
+  })
   }else{
     // aqui armá algun div de error
     console.log('Error boludo')
@@ -52,6 +55,7 @@ function optionAdd(lista){
 function showTemplate(file){
   let clone = file_card_template.cloneNode(true)
 
+  clone.querySelector('.file-card').setAttribute('alt', file.name)
   clone.querySelector('.file-card').classList.add(file.type)
   clone.querySelector('#file-tipo').textContent = file.type
   clone.querySelector('#file-title').textContent = file.name
@@ -63,10 +67,23 @@ function showTemplate(file){
 }
 function hideloading(){
   header.classList.add("show")
-  setTimeout(()=>{header.classList.add("show")}, 5000)
+  setTimeout(()=>{
+    header.classList.add("show")
+  }, 5000)
 }
-
 // se carga la ventana
 window.onload = () => {
   addApi()
+
+  filterInput.addEventListener("keyup", () => {
+    let value = filterInput.value.toUpperCase()
+    let listCardsFile = document.querySelectorAll(".file-card")
+    listCardsFile.forEach(item => {
+      if (item.textContent.toUpperCase().includes(value)) {
+        item.classList.remove("filter")        
+      }else {
+        item.classList.add("filter")
+      }
+    });
+  })
 }
