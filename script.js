@@ -71,16 +71,21 @@ function hideloading(){
     header.classList.add("show")
   }, 5000)
 }
+//remove tildes
+const removeAccents = (str) => {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 // se carga la ventana
 window.onload = () => {
   addApi()
 
   filterInput.addEventListener("keyup", () => {
-    let value = filterInput.value.toUpperCase()
+    let value = removeAccents(filterInput.value.toUpperCase())
     let listCardsFile = document.querySelectorAll(".file-card")
     listCardsFile.forEach(item => {
-      if (item.textContent.toUpperCase().includes(value)) {
-        item.classList.remove("filter")        
+      if (removeAccents(item.textContent).toUpperCase().includes(value)) {
+        item.classList.remove("filter")
       }else {
         item.classList.add("filter")
       }
