@@ -17,6 +17,7 @@
   color: inherit;
   list-style: none;
   border: none;
+  transition: all .2s ease-out;
 }
 *:focus{
   outline: none;
