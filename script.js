@@ -1,5 +1,5 @@
 // url del json que envio desede appscript de google
-const url_api = 'https://script.google.com/macros/s/AKfycbx2ozkGTwFrDK0wTWP6eJw3hQ1ufGsoCAmYcUoMk71jj2h784s/exec'
+const url_api = 'https://script.google.com/macros/s/AKfycbz8eTK_iIurw38i_l-Tw6k3iZmMaMoT4WUd4rOS3HsPSymwlq38R11Y-oBzA9s1qRUA/exec'
 // variables del DOM
 let header = document.querySelector('header'),
     section = document.getElementById('masonry-section'),
