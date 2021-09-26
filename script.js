@@ -28,7 +28,7 @@ async function addApi() {
   if (res.ok) {
     data.forEach((archivo) => {
       archivo.type = extensiones[archivo.type]
-      archivo.name = archivo.name.toLowerCase()
+      archivo.name = archivo.name
       category.push(archivo.category)
       lista.push(archivo.name)
       showTemplate(archivo)

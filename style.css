@@ -49,13 +49,17 @@ input{
   width: 100%;
   background: transparent;
 }
-.filter{order:1; visibility: hidden; opacity: 0;}
+.filter{
+  display: none;
+}
 .show{height: auto;}
 .masonry{
   margin: 0 1em;
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  grid-template-rows: masonry;
   grid-gap: 1em;
+  margin-bottom: 1em;
 }
 .file-card{
   width: 100%;
